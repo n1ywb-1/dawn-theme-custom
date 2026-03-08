@@ -238,8 +238,9 @@
                       {{ label_unavailable }}
                     {%- endcapture -%}
 
-                    {% render 'swatch', swatch: value.swatch, shape: block.settings.swatch_shape %}
-                    {{ help_text }}
+                    <a href="{{value.variant.url}}" style="position: relative; z-index: 2">
+                      {% render 'swatch', swatch: value.swatch, shape: block.settings.swatch_shape %}
+                    </a>
 
                   {%- endif -%}
                 {%- endfor -%}
