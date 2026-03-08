@@ -187,7 +187,9 @@
                   endif
                 -%}
 
+                {%- if picker_type == 'swatch' -%}
                 <variant-swatches> 
+                {%- endif -%}
 
                 {%- for value in option.values -%}
                   {%- liquid
@@ -235,12 +237,15 @@
                       {{ label_unavailable }}
                     {%- endcapture -%}
 
-                    {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_shape %}
+                    {% render 'swatch', swatch: value.swatch, shape: block.settings.swatch_shape %}
                     {{ help_text }}
 
                   {%- endif -%}
                 {%- endfor -%}
-              </variant-swatches>
+
+                {%- if picker_type == 'swatch' -%}
+                </variant-swatches> 
+                {%- endif -%}
 
               {%- endfor -%}
 
