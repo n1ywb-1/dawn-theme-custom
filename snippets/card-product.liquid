@@ -238,7 +238,31 @@
                       {{ label_unavailable }}
                     {%- endcapture -%}
 
-                    <a href="{{value.variant.url}}" style="position: relative; z-index: 2">
+                    {% comment %} if not value.variant then find first variant in product.variants where option 1 matches value {% endcomment %}
+
+                    {% comment %} <script>
+                      console.log("Dumping Object:");
+                      console.log({{ value | json }});
+                      console.log({{ card_product | json }});
+                    </script> {% endcomment %}
+
+                    {%- liquid
+                      assign variant_url = 'FIXME'
+                      if value.variant.id
+                        assign variant_url = value.variant.url
+                      else
+                        for variant in card_product.variants
+                          if variant.option1 == value
+                            assign variant_url = variant.url
+                            break
+                          else
+                            assign variant_url = 'NOTFOUND'
+                          endif
+                        endfor
+                      endif
+                    -%}
+
+                    <a href="{{ variant_url }}" style="position: relative; z-index: 2">
                       {% render 'swatch', swatch: value.swatch, shape: block.settings.swatch_shape %}
                     </a>
 
