@@ -259,7 +259,7 @@
 
                     {%- liquid
                       assign variant_url = 'FIXME'
-                      if value.variant.id
+                      if value.variant.available and value.variant.id
                         assign variant_url = value.variant.url
                       else
                         for variant in card_product.variants
