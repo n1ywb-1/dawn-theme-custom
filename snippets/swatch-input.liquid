@@ -25,6 +25,12 @@
     %}
 {% endcomment %}
 
+<style>
+  .swatch-input__input.visually-disabled + label {
+    display: none;
+  }
+</style>
+
 <input
   type="{{ type | default: 'radio' }}"
   id="{{ id }}"
