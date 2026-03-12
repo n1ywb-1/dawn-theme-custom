@@ -84,4 +84,5 @@
   background-color: rgb(var(--color-foreground));
   transform: rotate(-45deg);
   transform-origin: left;
+  display: none;
 }
