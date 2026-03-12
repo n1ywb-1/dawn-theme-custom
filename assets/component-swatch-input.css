@@ -46,9 +46,11 @@
 /* Visually disabled */
 .swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label {
   transition: none;
+  display: none;
 }
 .swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label:hover {
   outline: none;
+  display: none;
 }
 
 /* Actually disabled */
@@ -67,6 +69,7 @@
 .swatch-input__input:disabled + .swatch-input__label > .swatch,
 .swatch-input__input.visually-disabled + .swatch-input__label > .swatch {
   opacity: 0.4;
+  display: none;
 }
 
 /* Display crossed out line over swatch when input is disabled */
