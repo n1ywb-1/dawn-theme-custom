@@ -274,7 +274,7 @@
                     -%}
 
                     <a href="{{ variant_url }}" style="position: relative; z-index: 2">
-                      {% render 'swatch', swatch: value.swatch, shape: block.settings.swatch_shape %}
+                      {% render 'swatch', swatch: value.swatch, shape: "square" %}
                     </a>
 
                   {%- endif -%}
