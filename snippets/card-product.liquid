@@ -263,7 +263,7 @@
                         assign variant_url = value.variant.url
                       else
                         for variant in card_product.variants
-                          if variant.option1 == value
+                          if variant.available and variant.option1 == value
                             assign variant_url = variant.url
                             break
                           else
@@ -273,9 +273,11 @@
                       endif
                     -%}
 
-                    <a href="{{ variant_url }}" style="position: relative; z-index: 2">
-                      {% render 'swatch', swatch: value.swatch, shape: "square" %}
-                    </a>
+                    {%- if variant_url != 'NOTFOUND' and variant_url != 'FIXME' -%} 
+                      <a href="{{ variant_url }}" style="position: relative; z-index: 2">
+                        {% render 'swatch', swatch: value.swatch, shape: "square" %}
+                      </a>
+                    {%- endif -%}
 
                   {%- endif -%}
                 {%- endfor -%}
