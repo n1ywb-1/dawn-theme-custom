@@ -26,9 +26,6 @@
     assign terms = results.terms | escape
     assign results_url = '?q=' | append: terms | append: '&options%5Bprefix%5D=last&sort_by=' | append: sort_by
   endif
-  
-  assign available_variants = results.products | map: 'variants' | map: 'available' | where: true
-  assign available_colors = available_variants | map: 'option1' | uniq
 -%}
 
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -224,7 +221,7 @@
 
                             <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               {%- if presentation == 'swatch' -%}
-                                <div class="{{ label_class }}{% unless available_colors contains value.value %} visually-hidden{% endunless %}">
+                                <div class="{{ label_class }}">
                                   <div class="swatch-input-wrapper">
                                     {% render 'swatch-input',
                                       id: input_id,
@@ -593,7 +590,7 @@
 
                               <li class="mobile-facets__item list-menu__item">
                                 {% if presentation == 'swatch' %}
-                                  <div class="{{ label_class }}{% unless available_colors contains value.value %} visually-hidden{% endunless %}">
+                                  <div class="{{ label_class }}">
                                     <div class="swatch-input-wrapper">
                                       {% render 'swatch-input',
                                         id: input_id,
