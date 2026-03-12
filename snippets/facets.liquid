@@ -567,9 +567,6 @@
                                 if value.count == 0 and value.active == false
                                   assign is_disabled = true
                                 endif
-                                if not value.available
-                                  assign is_disabled = true
-                                endif
                               %}
 
                               {%- capture label_class -%}
