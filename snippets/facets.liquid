@@ -564,10 +564,7 @@
                               {% liquid
                                 assign input_id = 'Filter-' | append: filter.param_name | escape | append: '-mobile-' | append: forloop.index
                                 assign is_disabled = false
-                                if value.count == 0 and value.active == false
-                                  assign is_disabled = true
-                                endif
-                                if not value.available
+                                if value.available != true
                                   assign is_disabled = true
                                 endif
                               %}
