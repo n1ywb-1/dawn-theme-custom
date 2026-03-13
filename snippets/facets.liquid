@@ -29,13 +29,12 @@
 
   assign available_variants = results.products | map: 'variants' | map: 'available' | where: true
   assign available_colors = available_variants | map: 'option1' | uniq
-  
-  <script>
-    console.log("Available Variants:", {{ available_variants | json }});
-    console.log("Available Colors:", {{ available_colors | json }});
-  </script>
 -%}
 
+<script>
+  console.log("Available Variants:", {{ available_variants | json }});
+  console.log("Available Colors:", {{ available_colors | json }});
+</script>
 
 <div class="facets-container{% if filter_type == 'drawer' %} facets-container-drawer{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
   {%- if filter_type == 'vertical' or filter_type == 'horizontal' -%}
