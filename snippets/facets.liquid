@@ -32,6 +32,7 @@
 -%}
 
 <script>
+  console.log("results:", {{ results | json }});
   console.log("Available Variants:", {{ available_variants | json }});
   console.log("Available Colors:", {{ available_colors | json }});
 </script>
