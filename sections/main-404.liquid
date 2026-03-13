@@ -23,8 +23,11 @@
 </div>
 
 <script>
-  setTimeout(function() {
-    window.location.href = '/';
-  }, 10000); // Redirect to home page after 10 seconds
+  // Don't redirect if viewing in Shopify admin/theme editor (iframe)
+  if (window.self === window.top) {
+    setTimeout(function() {
+      window.location.href = '/';
+    }, 10000); // Redirect to home page after 10 seconds
+  }
 </script>
 
