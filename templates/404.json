@@ -12,9 +12,72 @@
     "main": {
       "type": "main-404",
       "settings": {}
+    },
+    "collection_list_dDHDmn": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_cU934k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tops"
+          }
+        },
+        "featured_collection_XaBPEM": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "bottoms"
+          }
+        },
+        "featured_collection_VFUpnF": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "dresses"
+          }
+        },
+        "featured_collection_Y4Khp4": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "tunics"
+          }
+        },
+        "featured_collection_A7Agqp": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "basics"
+          }
+        },
+        "featured_collection_WPFjtX": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "sale"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_cU934k",
+        "featured_collection_XaBPEM",
+        "featured_collection_VFUpnF",
+        "featured_collection_Y4Khp4",
+        "featured_collection_A7Agqp",
+        "featured_collection_WPFjtX"
+      ],
+      "name": "t:sections.collection-list.presets.name",
+      "settings": {
+        "title": "Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "collection_list_dDHDmn"
   ]
 }
