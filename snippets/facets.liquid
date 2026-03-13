@@ -197,9 +197,11 @@
                             assign sorted_values = active_filter_values | concat: inactive_filter_values
                           endif
                         -%}
+                        {% comment %} TODO change ul to be display flex horizontal wrap but only for swatches {% endcomment %}
                         <ul
                           class="{{ visual_layout_class }}{% if filter_type == 'vertical' %} facets__list--vertical{% else %} facets__list{% endif %} list-unstyled"
                           role="list"
+                          {% if presentation == 'swatch' %}style="display: flex; flex-wrap: wrap;"{% endif %}
                         >
                           {%- for value in sorted_values -%}
                             {% liquid
@@ -560,7 +562,8 @@
                               </span>
                             {%- endif -%}
                           </button>
-                          <ul class="{{ visual_layout_class }} mobile-facets__list list-unstyled" role="list">
+                          {% comment %} TODO change ul to be display flex horizontal wrap but only for swatches {% endcomment %}
+                          <ul class="{{ visual_layout_class }} mobile-facets__list list-unstyled" role="list" {% if presentation == 'swatch' %}style="display: flex; flex-wrap: wrap;"{% endif %}>
                             {%- liquid
                               assign sorted_values = filter.values
                               # Keep the selected values grouped together when operator is AND
