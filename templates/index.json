@@ -28,7 +28,6 @@
         },
         "buttons_aRkgBK": {
           "type": "buttons",
-          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
@@ -50,11 +49,11 @@
         "image_height": "medium",
         "image_behavior": "zoom-in",
         "desktop_content_position": "bottom-center",
-        "desktop_content_alignment": "left",
+        "desktop_content_alignment": "center",
         "show_text_box": true,
         "color_scheme": "scheme-2",
         "stack_images_on_mobile": false,
-        "mobile_content_alignment": "left",
+        "mobile_content_alignment": "center",
         "show_text_below": true
       }
     },
