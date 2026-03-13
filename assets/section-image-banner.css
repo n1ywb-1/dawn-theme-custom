@@ -166,6 +166,10 @@
   width: 100%;
 }
 
+.banner__media > img {
+  padding-top: 64px;
+}
+
 .banner__media-half {
   width: 50%;
 }
