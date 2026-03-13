@@ -197,7 +197,6 @@
                             assign sorted_values = active_filter_values | concat: inactive_filter_values
                           endif
                         -%}
-                        {% comment %} TODO change ul to be display flex horizontal wrap but only for swatches {% endcomment %}
                         <ul
                           class="{{ visual_layout_class }}{% if filter_type == 'vertical' %} facets__list--vertical{% else %} facets__list{% endif %} list-unstyled"
                           role="list"
@@ -216,7 +215,7 @@
                             {%- endcapture -%}
 
                             {%- capture text_value -%}
-                              <span class="facet-checkbox__text" aria-hidden="true">
+                              <span class="facet-checkbox__text" aria-hidden="true"{% if presentation == 'swatch' %} style="display: none;"{% endif %}>
                                 <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
                               </span>
                               <span class="visually-hidden">
@@ -562,7 +561,6 @@
                               </span>
                             {%- endif -%}
                           </button>
-                          {% comment %} TODO change ul to be display flex horizontal wrap but only for swatches {% endcomment %}
                           <ul class="{{ visual_layout_class }} mobile-facets__list list-unstyled" role="list" {% if presentation == 'swatch' %}style="display: flex; flex-wrap: wrap;"{% endif %}>
                             {%- liquid
                               assign sorted_values = filter.values
@@ -587,7 +585,7 @@
                               {%- endcapture -%}
 
                               {%- capture text_value -%}
-                                <span class="facet-checkbox__text" aria-hidden="true">
+                                <span class="facet-checkbox__text" aria-hidden="true"{% if presentation == 'swatch' %} style="display: none;"{% endif %}>
                                   <span class="facet-checkbox__text-label">{{- value.label | escape }}</span> ({{- value.count -}})
                                 </span>
                                 <span class="visually-hidden">
