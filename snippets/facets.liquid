@@ -231,7 +231,7 @@
 
                             <li class="list-menu__item facets__item{% if forloop.index > show_more_number and filter_type == 'vertical' %} show-more-item hidden{% endif %}">
                               {%- if presentation == 'swatch' -%}
-                                <div class="{{ label_class }}">
+                                <div class="{{ label_class }}" style="padding: 8px">
                                   <div class="swatch-input-wrapper">
                                     {% render 'swatch-input',
                                       id: input_id,
@@ -601,7 +601,7 @@
 
                               <li class="mobile-facets__item list-menu__item">
                                 {% if presentation == 'swatch' %}
-                                  <div class="{{ label_class }}">
+                                  <div class="{{ label_class }}" style="padding: 8px">
                                     <div class="swatch-input-wrapper">
                                       {% render 'swatch-input',
                                         id: input_id,
