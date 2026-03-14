@@ -408,7 +408,8 @@
   },
   "platform_customizations": {
     "custom_css": [
-      "variant-swatches a:nth-child(n + 6) {display: none;}"
+      "variant-swatches a:nth-child(n + 5) {display: none;}",
+      "variant-swatches a:nth-last-child(1) {display: block;}"
     ]
   }
 }
