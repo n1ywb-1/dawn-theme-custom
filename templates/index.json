@@ -14,6 +14,7 @@
       "blocks": {
         "heading_Qm6UBV": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Welcome to Salaam Clothing",
             "heading_size": "h0"
@@ -21,6 +22,7 @@
         },
         "text_aW49Lx": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "<em>Crafted with care. Loved by customers. A signature bestselling brand. Made in the USA since 1990</em>",
             "text_style": "body"
@@ -28,6 +30,7 @@
         },
         "buttons_aRkgBK": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Shop all",
             "button_link_1": "shopify://collections/all",
