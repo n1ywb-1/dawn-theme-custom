@@ -45,9 +45,9 @@
         "buttons_aRkgBK"
       ],
       "settings": {
-        "image": "shopify://shop_images/webbanner.jpg",
+        "image": "shopify://shop_images/Autumn_Fashion_Sale_Banner.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "adapt",
         "image_behavior": "none",
         "desktop_content_position": "bottom-center",
         "desktop_content_alignment": "center",
