@@ -47,7 +47,7 @@
         "buttons_aRkgBK"
       ],
       "settings": {
-        "image": "shopify://shop_images/fallbanner1.jpg",
+        "image": "shopify://shop_images/salebanner.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
