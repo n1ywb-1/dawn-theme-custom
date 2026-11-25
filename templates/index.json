@@ -47,7 +47,7 @@
         "buttons_aRkgBK"
       ],
       "settings": {
-        "image": "shopify://shop_images/Black_Friday_banner_c0989d91-7c6a-4d7d-ba21-46dd7d2e9fa0.jpg",
+        "image": "shopify://shop_images/Black_Friday_banner_0b1b59cf-0d70-4956-a930-3430892da968.jpg",
         "image_overlay_opacity": 0,
         "image_height": "adapt",
         "image_behavior": "none",
@@ -55,7 +55,7 @@
         "desktop_content_alignment": "center",
         "show_text_box": false,
         "color_scheme": "scheme-4",
-        "stack_images_on_mobile": false,
+        "stack_images_on_mobile": true,
         "mobile_content_alignment": "center",
         "show_text_below": true
       }
